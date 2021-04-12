@@ -1,0 +1,68 @@
+body{
+    background-color: rgb(255, 252, 86);
+}
+.Maincontain{
+    /* border: 2px solid rgb(8, 8, 8); */
+    position: relative;
+    width: 33vw;
+    height: 33vw;
+    margin: auto;
+   top: 40px;
+   border-radius: 50%;
+   box-shadow: 15px 15px 30px #665800,
+   -15px -15px 30px rgb(255, 240, 156);
+}
+#clockcontain{  
+    position: relative;
+    margin: auto;
+    height: 30vw;
+    width: 30vw; 
+    background: url(clock1.png) no-repeat;
+    background-size: 100%;
+    top:18px;
+    border-radius: 50%;
+    box-shadow: inset 15px 15px 30px #665800,
+    inset -15px -15px 30px rgb(255, 240, 156);
+}
+#clockcontain::before{
+    content: '';
+    width: 25px;
+    height: 25px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 90;
+}
+
+#hr, #min, #sec{
+    position: absolute;
+    background: black;
+    border-radius: 50%; 
+    transform-origin: bottom;
+}
+#hr{
+    width: 1.8%;
+    height: 25%;
+    top: 25%;
+    left: 48.85%;
+    opacity: 0.8; 
+}
+#min{
+    width: 1.6%;
+    height: 30%;
+    top: 19%;
+    left: 48.9%;
+    opacity: 0.8;  
+}
+#sec{
+    width: 1%;
+    height: 40%;
+    top: 9%;
+    left: 49.25%;
+    /* opacity: 0.8;  */
+    background: red;
+    z-index: 9;
+}
